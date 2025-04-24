@@ -1,138 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix Wealth Strategies, Inc. - Financial & Business Consulting</title>
-    <meta name="description" content="Phoenix Wealth Strategies, Inc. offers expert financial management and business consulting services to help organizations achieve their strategic goals and optimize operations.">
-    <meta name="keywords" content="financial management consulting, business consulting, strategic planning, business process improvement, organizational planning, new business start-up, records management">
-    <meta name="author" content="Phoenix Wealth Strategies, Inc.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Phoenix Wealth Strategies, Inc.">
-    <meta property="og:description" content="Expert financial management and business consulting services.">
-    <meta property="og:url" content="https://www.phoenixwealthstrategiesinc.com/">
-    <meta property="og:type" content="website">
-    </head>
+  <meta charset="UTF-8">
+  <title>Phoenix Wealth Strategies Inc. | Financial & Business Management Consulting</title>
+  <meta name="description" content="Phoenix Wealth Strategies Inc. offers expert business and financial management consulting services in New York. Trusted by organizations seeking strategic transformation, operational excellence, and sustainable growth.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="business management consulting, financial consulting, NAICS 541611, SIC 8742, New York, strategic advisory, Phoenix Wealth Strategies Inc.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Phoenix Wealth Strategies Inc. | Financial & Business Management Consulting">
+  <meta property="og:description" content="Expert consulting services for business transformation, operational excellence, and financial strategy.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://www.phoenixwealthstrategiesinc.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Styles -->
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #e67e22;
+      --accent: #f5f5f5;
+      --text: #222;
+      --button: #e67e22;
+      --button-hover: #ca6f1e;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: var(--accent);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 0;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .navbar img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar nav a:hover {
+      color: var(--secondary);
+    }
+    .hero {
+      background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 0.5rem 0;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      background: var(--button);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+    }
+    .cta-btn:hover {
+      background: var(--button-hover);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      border-bottom: 2px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .service-card {
+      flex: 1 1 300px;
+      background: var(--accent);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.07);
+      margin-bottom: 1rem;
+    }
+    .service-card h3 {
+      color: var(--secondary);
+      margin-top: 0;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-text {
+      flex: 2 1 300px;
+    }
+    .about-logo {
+      flex: 1 1 180px;
+      text-align: center;
+    }
+    .about-logo img {
+      max-width: 140px;
+      border-radius: 8px;
+      background: #fff;
+      border: 2px solid var(--secondary);
+      padding: 0.5rem;
+    }
+    .contact-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .contact-form, .map {
+      flex: 1 1 350px;
+      min-width: 320px;
+    }
+    .social-links {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      color: var(--primary);
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--secondary);
+    }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.1rem 0;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .services-list, .about, .contact-social {
+        flex-direction: column;
+      }
+      .service-card, .about-text, .about-logo, .contact-form, .map {
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Phoenix Wealth Strategies, Inc. Logo" style="height: 50px;"></a>
-                <h1>Phoenix Wealth Strategies, Inc.</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="navbar">
+      <div>
+        <img src="logo.png" alt="Phoenix Wealth Strategies Logo">
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Phoenix Wealth Strategies Inc.</h1>
+    <p>Empowering organizations in New York and beyond with expert business management and financial consulting. <br>
+    Strategic guidance for sustainable growth, operational excellence, and transformation.<br>
+    <span style="font-size:0.95em; color:#ffe5c2;">(NAICS 541611 · SIC 8742 · Not investment advice)</span>
+    </p>
+    <a href="#contact" class="cta-btn">Request a Consultation</a>
+  </div>
+
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-list">
+        <div class="service-card">
+          <h3>Business Management Consulting</h3>
+          <p>Comprehensive advisory services for organizational transformation, operational improvement, and strategic planning. We help businesses optimize processes, manage change, and achieve measurable results.</p>
         </div>
-    </header>
-
-    <main>
-        <section id="home-page" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Strategic Solutions for Business Excellence</h1>
-                    <p class="value-proposition">Empowering your organization with expert financial management and business consulting to drive growth and achieve sustainable success.</p>
-                    <div class="call-to-actions">
-                        <a href="services.html" class="button primary">Our Services</a>
-                        <a href="contact.html" class="button secondary">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services-overview" class="section">
-            <div class="container">
-                <h2>How We Can Help Your Business Soar</h2>
-                <p class="section-intro">We offer a comprehensive suite of consulting services designed to address your unique challenges and unlock your organization's full potential.</p>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <img src="placeholder-financial-planning.png" alt="Financial Planning Icon" style="max-width: 80px;">
-                        <h3>Financial Planning & Budgeting Consulting</h3>
-                        <p>Developing robust financial plans and effective budgeting strategies for informed decision-making.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="placeholder-strategic-planning.png" alt="Strategic Planning Icon" style="max-width: 80px;">
-                        <h3>Strategic Organizational Planning</h3>
-                        <p>Defining clear organizational goals and developing actionable strategies to achieve them.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="placeholder-process-improvement.png" alt="Process Improvement Icon" style="max-width: 80px;">
-                        <h3>Business Process Improvement</h3>
-                        <p>Streamlining operations, enhancing efficiency, and reducing costs through process optimization.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="placeholder-records-management.png" alt="Records Management Icon" style="max-width: 80px;">
-                        <h3>Records & Administrative Management</h3>
-                        <p>Implementing effective systems for managing information and administrative processes.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="placeholder-new-business.png" alt="New Business Icon" style="max-width: 80px;">
-                        <h3>New Business Start-Up Consulting</h3>
-                        <p>Providing guidance and support for launching successful new business ventures.</p>
-                    </div>
-                    </div>
-                <div class="disclaimer">
-                    <p><strong>Disclaimer:</strong> Phoenix Wealth Strategies, Inc. does not offer financial advice. Our services are limited to financial management consulting and business management consulting.</p>
-                </div>
-            </div>
-        </section>
-
-        </main>
-
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Phoenix Wealth Strategies, Inc.</p>
-                <p>447 Broadway floor 2 suite 1089, New York, NY 10013</p>
-                <p>Phone: 917-830-7933</p>
-                <p>Email: <a href="mailto:info@phoenixwealthstrategiesinc.com">info@phoenixwealthstrategiesinc.com</a></p>
-            </div>
-            <div class="social-links">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/company/phoenix-wealth-strategies-inc" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="https://www.youtube.com/@PhoenixWealthStrategies" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                    <li><a href="https://x.com/PhoenixWealthSt" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-                    <li><a href="https:facebook.com/phoenixwealthstrategies" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                    <li><a href="yelp.com/biz/phoenix-wealth-strategies-new-york" target="_blank" rel="noopener noreferrer">Yelp</a></li>
-                </ul>
-            </div>
-            <div class="business-listings">
-                <h3>Find Us Online</h3>
-                <ul>
-                    <li><a href="https://www.phoenixwealthstrategiesinc.com/" target="_blank" rel="noopener noreferrer">Main Website</a></li>
-                    <li><a href="https://maps.app.goo.gl/HKWV17xPe3YZcHg98" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
-                    <li><a href="https://www.bing.com/maps?ss=ypid.YN873x12494749062557069091&mkt=en-US&cp=40.720608%7E-74.001031&lvl=16.0#" target="_blank" rel="noopener noreferrer">Bing Maps</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>© 2025 Phoenix Wealth Strategies, Inc. All rights reserved.</p>
-            </div>
+        <div class="service-card">
+          <h3>Financial Consulting</h3>
+          <p>Expert guidance on financial management, budgeting, forecasting, and performance analysis. We empower clients to make data-driven decisions and enhance financial health—without providing investment advice.</p>
         </div>
-    </footer>
+        <div class="service-card">
+          <h3>Risk & Compliance Advisory</h3>
+          <p>Navigate complex regulatory environments with confidence. Our consulting ensures compliance, manages risk, and supports sustainable growth in a rapidly changing business landscape.</p>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        // Basic JavaScript for responsiveness (you might need more complex logic in your CSS)
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-            const nav = document.querySelector('nav');
+    <section id="about">
+      <h2>About Phoenix Wealth Strategies</h2>
+      <div class="about">
+        <div class="about-text">
+          <p>
+            Phoenix Wealth Strategies Inc. is a New York-based business and financial management consulting firm dedicated to helping organizations thrive in dynamic markets. With a proven track record and a strong online reputation, we deliver tailored solutions for operational excellence, strategic transformation, and financial clarity.<br><br>
+            Our approach is client-centric, data-driven, and results-focused. We partner with businesses of all sizes, offering the expertise and support needed to achieve sustainable growth and navigate complex challenges.<br><br>
+            <strong>Why choose us?</strong>
+            <ul>
+              <li>Trusted expertise in business and financial consulting</li>
+              <li>Personalized, confidential service</li>
+              <li>Commitment to integrity, transparency, and measurable outcomes</li>
+              <li>Recognized presence across leading business platforms</li>
+            </ul>
+          </p>
+        </div>
+        <div class="about-logo">
+          <img src="logo.png" alt="Phoenix Wealth Strategies Logo">
+        </div>
+      </div>
+    </section>
 
-            if (mobileNavToggle && nav) {
-                mobileNavToggle.addEventListener('click', () => {
-                    nav.classList.toggle('nav-open');
-                });
-            }
-        });
-    </script>
+    <section id="contact">
+      <h2>Contact & Location</h2>
+      <div class="contact-social">
+        <div class="contact-form">
+          <h3>Contact Us</h3>
+          <p>Ready to discuss your business needs? Complete the form below and we'll respond promptly.</p>
+          <!-- Embedded Google Form -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfE7PA9aSoqh7br09NMp23tRd5YEJqDSitR2kJ05ONvY9Piyg/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px; background:#f9f9f9;">Loading…</iframe>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/phoenix-wealth-strategies-inc" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn">&#x1F465;</a>
+            <a href="https://www.youtube.com/@PhoenixWealthStrategies" title="YouTube" target="_blank" rel="noopener" aria-label="YouTube">&#x1F4FA;</a>
+            <a href="https://x.com/PhoenixWealthSt" title="X (Twitter)" target="_blank" rel="noopener" aria-label="X (Twitter)">&#x1F426;</a>
+            <a href="https://www.facebook.com/phoenixwealthstrategies" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">&#x1F4F1;</a>
+            <a href="https://yelp.com/biz/phoenix-wealth-strategies-new-york" title="Yelp" target="_blank" rel="noopener" aria-label="Yelp">&#x1F4CC;</a>
+            <a href="https://www.phoenixwealthstrategiesinc.com/" title="Website" target="_blank" rel="noopener" aria-label="Website">&#x1F310;</a>
+          </div>
+        </div>
+        <div class="map">
+          <h3>Our Location</h3>
+          <!-- Embedded Google Map -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.882375840541!2d-74.0014893!3d40.7206058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44cc45d3f6c4a455%3A0x34a3d26fbf6a3a2e!2sPhoenix%20Wealth%20Strategies%20Inc.!5e0!3m2!1sen!2sus!4v1745523256510!5m2!1sen!2sus"
+            width="100%" height="350" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p style="margin-top:0.7em;"><strong>Phoenix Wealth Strategies Inc.</strong><br>
+            New York, NY<br>
+            <a href="https://maps.app.goo.gl/HKWV17xPe3YZcHg98" target="_blank" rel="noopener">View on Google Maps</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Phoenix Wealth Strategies Inc. | Business & Financial Management Consulting | NAICS 541611 | SIC 8742<br>
+    <span style="font-size:0.9em;">Website powered by GitHub Pages. Not investment advice.</span>
+  </footer>
 </body>
 </html>
