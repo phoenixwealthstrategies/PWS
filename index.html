@@ -3,994 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Phoenix Wealth Strategies, Inc. - Professional consulting services for financial management and business optimization in New York, NY.">
-    <meta name="keywords" content="business consulting, financial management consulting, strategic planning, business optimization, New York consulting">
-    <title>Phoenix Wealth Strategies, Inc. | Business & Financial Management Consulting</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <style>
-        /* Global Styles */
-        :root {
-            --primary-gold: #d4af37;
-            --primary-blue: #1a365d;
-            --secondary-blue: #2c5282;
-            --light-gold: #f0e6c0;
-            --light-gray: #f8f9fa;
-            --dark-gray: #343a40;
-            --white: #ffffff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--white);
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-        }
-        
-        h3 {
-            font-size: 1.75rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--secondary-blue);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--primary-gold);
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary-gold);
-            color: var(--primary-blue);
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: var(--primary-blue);
-            color: var(--primary-gold);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary-gold);
-            color: var(--primary-gold);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary-gold);
-            color: var(--primary-blue);
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 1rem;
-        }
-        
-        .logo h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0;
-            color: var(--primary-blue);
-        }
-        
-        .logo span {
-            color: var(--primary-gold);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        
-        nav ul li a {
-            font-weight: 600;
-            padding: 0.5rem;
-            position: relative;
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--primary-gold);
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 9rem 0 5rem;
-            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('/api/placeholder/1600/800') center/cover no-repeat;
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background-color: var(--light-gray);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            position: relative;
-            padding-bottom: 1rem;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background-color: var(--primary-gold);
-            bottom: 0;
-            left: 25%;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-gold);
-            margin-bottom: 1rem;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 5rem 0;
-            background-color: var(--white);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .testimonial-card {
-            background-color: var(--light-gray);
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '\201C';
-            font-size: 5rem;
-            font-family: Georgia, serif;
-            color: var(--primary-gold);
-            opacity: 0.3;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-        }
-        
-        .testimonial-content {
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .testimonial-author img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 1rem;
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            margin-bottom: 0.25rem;
-        }
-        
-        .author-info p {
-            margin-bottom: 0;
-            color: var(--dark-gray);
-            font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
-        .cta {
-            padding: 5rem 0;
-            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
-            color: var(--white);
-            text-align: center;
-        }
-        
-        .cta h2 {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 8rem 0 5rem;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-img img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .about-text h2 {
-            margin-bottom: 2rem;
-        }
-        
-        .mission-box {
-            background-color: var(--light-gold);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            position: relative;
-        }
-        
-        .mission-box::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 5px;
-            background-color: var(--primary-gold);
-            border-radius: 5px 0 0 5px;
-        }
-        
-        /* Team Section */
-        .team {
-            padding: 5rem 0;
-            background-color: var(--light-gray);
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .team-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .team-img {
-            height: 250px;
-            overflow: hidden;
-        }
-        
-        .team-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .team-content {
-            padding: 1.5rem;
-        }
-        
-        .team-content h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .team-content p {
-            color: var(--dark-gray);
-            margin-bottom: 1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--light-gray);
-            color: var(--primary-blue);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--primary-gold);
-            color: var(--white);
-        }
-        
-        /* Values Section */
-        .values {
-            padding: 5rem 0;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .value-card {
-            padding: 2rem;
-            border-radius: 10px;
-            background-color: var(--white);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .value-icon {
-            font-size: 3rem;
-            color: var(--primary-gold);
-            margin-bottom: 1rem;
-        }
-        
-        /* Certifications Section */
-        .certifications {
-            padding: 5rem 0;
-            background-color: var(--light-gray);
-        }
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .cert-card {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        
-        .cert-logo {
-            height: 100px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .cert-logo img {
-            max-height: 100%;
-            max-width: 100%;
-        }
-        
-        /* Detailed Services Section */
-        .detailed-services {
-            padding: 8rem 0 5rem;
-        }
-        
-        .service-block {
-            margin-bottom: 4rem;
-            padding-bottom: 4rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .service-block:last-child {
-            border-bottom: none;
-        }
-        
-        .service-flex {
-            display: flex;
-            flex-direction: row;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .service-flex-reverse {
-            flex-direction: row-reverse;
-        }
-        
-        .service-img-container {
-            flex: 1;
-        }
-        
-        .service-img-container img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-text {
-            flex: 1;
-        }
-        
-        .benefits-list {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-        }
-        
-        .benefits-list li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-            list-style-type: none;
-        }
-        
-        .benefits-list li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            color: var(--primary-gold);
-            position: absolute;
-            left: 0;
-        }
-        
-        /* Contact Page */
-        .contact {
-            padding: 8rem 0 5rem;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-info {
-            background-color: var(--light-gray);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-icon {
-            color: var(--primary-gold);
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            min-width: 2rem;
-        }
-        
-        .business-hours {
-            margin-bottom: 2rem;
-        }
-        
-        .hours-list {
-            list-style: none;
-        }
-        
-        .hours-list li {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px dashed #ddd;
-        }
-        
-        .hours-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .social-links-contact {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links-contact a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links-contact a:hover {
-            background-color: var(--primary-gold);
-        }
-        
-        .map-container {
-            margin-top: 3rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-col h3 {
-            color: var(--white);
-            position: relative;
-            padding-bottom: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--primary-gold);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-gold);
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-social a:hover {
-            background-color: var(--primary-gold);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-bottom p {
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-        
-        .disclaimer {
-            background-color: var(--light-gold);
-            padding: 1.5rem;
-            border-radius: 5px;
-            margin: 2rem 0;
-            font-size: 0.9rem;
-            border-left: 5px solid var(--primary-gold);
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content,
-            .service-flex {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .service-flex {
-                flex-direction: column;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-menu {
-                display: block;
-            }
-            
-            nav {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 80%;
-                height: calc(100vh - 70px);
-                background-color: var(--white);
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                transition: left 0.3s ease;
-                z-index: 999;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: 2rem;
-            }
-            
-            nav ul li {
-                margin: 0 0 1.5rem 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
-</head>
+    <title>Phoenix Wealth Strategies, Inc. - Financial & Business Consulting</title>
+    <meta name="description" content="Phoenix Wealth Strategies, Inc. offers expert financial management and business consulting services to help organizations achieve their strategic goals and optimize operations.">
+    <meta name="keywords" content="financial management consulting, business consulting, strategic planning, business process improvement, organizational planning, new business start-up, records management">
+    <meta name="author" content="Phoenix Wealth Strategies, Inc.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Phoenix Wealth Strategies, Inc.">
+    <meta property="og:description" content="Expert financial management and business consulting services.">
+    <meta property="og:url" content="https://www.phoenixwealthstrategiesinc.com/">
+    <meta property="og:type" content="website">
+    </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="logo.png" alt="Phoenix Wealth Strategies Logo">
-                    <h1>Phoenix <span>Wealth Strategies</span></h1>
-                </div>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Phoenix Wealth Strategies, Inc. Logo" style="height: 50px;"></a>
+                <h1>Phoenix Wealth Strategies, Inc.</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Home Page Content -->
-    <main id="home-content">
-        <!-- Hero Section -->
-        <section class="hero">
+    <main>
+        <section id="home-page" class="hero">
             <div class="container">
-                <h1>Strategic Solutions for Business Growth</h1>
-                <p>Phoenix Wealth Strategies provides expert consulting services to optimize your business operations and enhance financial management processes.</p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="btn">Explore Our Services</a>
-                    <a href="contact.html" class="btn btn-outline">Schedule a Consultation</a>
+                <div class="hero-content">
+                    <h1>Strategic Solutions for Business Excellence</h1>
+                    <p class="value-proposition">Empowering your organization with expert financial management and business consulting to drive growth and achieve sustainable success.</p>
+                    <div class="call-to-actions">
+                        <a href="services.html" class="button primary">Our Services</a>
+                        <a href="contact.html" class="button secondary">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Overview Section -->
-        <section class="services">
+        <section id="services-overview" class="section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Our Consulting Services</h2>
-                    <p>We offer comprehensive business consulting solutions designed to optimize your operations and improve financial management processes.</p>
-                </div>
+                <h2>How We Can Help Your Business Soar</h2>
+                <p class="section-intro">We offer a comprehensive suite of consulting services designed to address your unique challenges and unlock your organization's full potential.</p>
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="/api/placeholder/400/300" alt="Financial Planning Consulting">
-                        </div>
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h3>Financial Planning Consulting</h3>
-                            <p>Our consulting services help businesses develop effective financial planning strategies and budgeting systems.</p>
-                            <a href="services.html#financial-planning" class="btn">Learn More</a>
-                        </div>
+                    <div class="service-item">
+                        <img src="placeholder-financial-planning.png" alt="Financial Planning Icon" style="max-width: 80px;">
+                        <h3>Financial Planning & Budgeting Consulting</h3>
+                        <p>Developing robust financial plans and effective budgeting strategies for informed decision-making.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="/api/placeholder/400/300" alt="Strategic Organizational Planning">
-                        </div>
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-sitemap"></i>
-                            </div>
-                            <h3>Strategic Organizational Planning</h3>
-                            <p>We help businesses develop comprehensive strategic plans for sustainable growth and operational excellence.</p>
-                            <a href="services.html#strategic-planning" class="btn">Learn More</a>
-                        </div>
+                    <div class="service-item">
+                        <img src="placeholder-strategic-planning.png" alt="Strategic Planning Icon" style="max-width: 80px;">
+                        <h3>Strategic Organizational Planning</h3>
+                        <p>Defining clear organizational goals and developing actionable strategies to achieve them.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="service-img">
-                            <img src="/api/placeholder/400/300" alt="Business Process Improvement">
-                        </div>
-                        <div class="service-content">
-                            <div class="service-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>Business Process Improvement</h3>
-                            <p>Our experts identify operational inefficiencies and implement solutions to optimize your business processes.</p>
-                            <a href="services.html#process-improvement" class="btn">Learn More</a>
-                        </div>
+                    <div class="service-item">
+                        <img src="placeholder-process-improvement.png" alt="Process Improvement Icon" style="max-width: 80px;">
+                        <h3>Business Process Improvement</h3>
+                        <p>Streamlining operations, enhancing efficiency, and reducing costs through process optimization.</p>
                     </div>
+                    <div class="service-item">
+                        <img src="placeholder-records-management.png" alt="Records Management Icon" style="max-width: 80px;">
+                        <h3>Records & Administrative Management</h3>
+                        <p>Implementing effective systems for managing information and administrative processes.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="placeholder-new-business.png" alt="New Business Icon" style="max-width: 80px;">
+                        <h3>New Business Start-Up Consulting</h3>
+                        <p>Providing guidance and support for launching successful new business ventures.</p>
+                    </div>
+                    </div>
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> Phoenix Wealth Strategies, Inc. does not offer financial advice. Our services are limited to financial management consulting and business management consulting.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Client Testimonials</h2>
-                    <p>See what our clients say about our consulting services</p>
-                </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>Phoenix Wealth Strategies transformed our business operations. Their strategic planning consultation helped us identify growth opportunities we hadn't considered before.</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Client Photo">
-                            <div class="author-info">
-                                <h4>Michael Johnson</h4>
-                                <p>CEO, Growth Technologies</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>The business process improvement consulting we received helped us streamline operations and reduce costs by 30%. Their practical approach delivered real results.</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Client Photo">
-                            <div class="author-info">
-                                <h4>Sarah Williams</h4>
-                                <p>Operations Director, Innovative Solutions</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>As a startup founder, the new business consulting services from Phoenix Wealth Strategies were invaluable. They helped us build a solid foundation for sustainable growth.</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Client Photo">
-                            <div class="author-info">
-                                <h4>David Chen</h4>
-                                <p>Founder, NextGen Startups</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </main>
 
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Schedule a consultation with our expert business consultants to discuss how we can help optimize your operations and improve financial management.</p>
-                <a href="contact.html" class="btn">Contact Us Today</a>
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phoenix Wealth Strategies, Inc.</p>
+                <p>447 Broadway floor 2 suite 1089, New York, NY 10013</p>
+                <p>Phone: 917-830-7933</p>
+                <p>Email: <a href="mailto:info@phoenixwealthstrategiesinc.com">info@phoenixwealthstrategiesinc.com</a></p>
             </div>
-        </section>
-    </main>
-
-    <!-- About Page Content -->
-    <main id="about-content" style="display: none;">
-        <!-- About Section -->
-        <section class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-img">
-                        <img src="/api/placeholder/600/400" alt="Phoenix Wealth Strategies Office">
-                    </div>
-                    <div class="about-text">
-                        <h2>About Phoenix Wealth Strategies</h2>
-                        <p>Phoenix Wealth Strategies, Inc. is a leading business and financial management consulting firm based in New York. We specialize in providing comprehensive consulting services to businesses of all sizes, helping them optimize operations, improve financial management processes, and achieve sustainable growth.</p>
-                        <div class="mission-box">
-                            <h3>Our Mission</h3>
-                            <p>To empower businesses with strategic solutions that drive growth, optimize operations, and enhance financial management practices, enabling our clients to achieve their full potential in an ever-changing business landscape.</p>
-                        </div>
-                        <p>With years of experience in business consulting, our team brings expertise and insight to every client engagement. We take pride in our personalized approach, developing tailored solutions that address the unique challenges and opportunities each business faces.</p>
-                    </div>
-                </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/phoenix-wealth-strategies-inc" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/@PhoenixWealthStrategies" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://x.com/PhoenixWealthSt" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+                    <li><a href="https:facebook.com/phoenixwealthstrategies" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="yelp.com/biz/phoenix-wealth-strategies-new-york" target="_blank" rel="noopener noreferrer">Yelp</a></li>
+                </ul>
             </div>
-        </section>
+            <div class="business-listings">
+                <h3>Find Us Online</h3>
+                <ul>
+                    <li><a href="https://www.phoenixwealthstrategiesinc.com/" target="_blank" rel="noopener noreferrer">Main Website</a></li>
+                    <li><a href="https://maps.app.goo.gl/HKWV17xPe3YZcHg98" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+                    <li><a href="https://www.bing.com/maps?ss=ypid.YN873x12494749062557069091&mkt=en-US&cp=40.720608%7E-74.001031&lvl=16.0#" target="_blank" rel="noopener noreferrer">Bing Maps</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Phoenix Wealth Strategies, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Team Section -->
-        <section class="team
+    <script>
+        // Basic JavaScript for responsiveness (you might need more complex logic in your CSS)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const nav = document.querySelector('nav');
+
+            if (mobileNavToggle && nav) {
+                mobileNavToggle.addEventListener('click', () => {
+                    nav.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
